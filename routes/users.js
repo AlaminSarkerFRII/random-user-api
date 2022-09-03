@@ -1,28 +1,21 @@
-import express from "express"
-const router = express.Router()
+import express from "express";
+import { v4 as uuidv4 } from 'uuid';
 
-// users 
-
-const users = [
-    {
-      id: 1,
-      name: "Leanne Graham",
-      username: "Bret",
-      email: "Sincere@april.biz",
-        }
-]
+const router = express.Router();
+// users
+const users =[];
 
 // get all users from /users routes
-router.get("/",(req,res)=>{
-    console.log(users)
-    res.send(users)
-})
+router.get("/", (req, res) => {
+  res.send(users);
+});
 
 // add new user using post api
-
-router.post("/",(req,res)=>{
-    console.log("Post is Reached")
-    res.send("POst is Reached")
-})
+router.post("/", (req, res) => {
+  const user = req.body;
+  console.log(user,"Users are here")
+  users.push({ ...user, id: uuidv4()});
+  res.send(`the user ${user.name} has been added in database`);
+});
 
 export default router;

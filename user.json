@@ -25,5 +25,12 @@
       "address": "Kulas ,Bangladesh",
       "contact": "019100000",
       "photoURL": "https://via.placeholder.com/600/f66b97"
-    }
+    },
+    {
+      "name":"Laximan",
+      "gender":"male",
+      "contact":"01740051569",
+      "address":"jhan,Bangladesh",
+      "photoURL":"https://via.placeholder.com/600/51aa97"
+  }
 ]

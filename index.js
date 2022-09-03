@@ -8,14 +8,13 @@ const PORT = 5000
 app.use(express.json())
 
 
-// all users 
+// all users with this routes
 app.use("/users",userRoutes);
 
 
 // local server 
 app.get("/",(req,res)=>{
-    console.log('[TEST]!')
-    res.send("Hello From Home Page ")
+    res.send("Hello From Home Page")
 })
 
 // listen
