@@ -1,16 +1,15 @@
-import express from "express"
-import userRoutes from "./routes/users.js"
+const express = require('express');
+const userRoutes =  require("./routes/users.js")
 const app = express()
 const PORT = 5000
 
 
 // middleware 
 app.use(express.json())
-
+// app.use(express.static("public"))
 
 // all users with this routes
 app.use("/users",userRoutes);
-
 
 // local server 
 app.get("/",(req,res)=>{
